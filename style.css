@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&family=Lexend+Exa:wght@300&family=Open+Sans&family=Outfit:wght@300;400&family=Overpass:wght@300;500&family=Poppins&family=Roboto:ital,wght@0,300;0,500;1,500&family=Ubuntu:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Lexend+Exa:wght@300&family=Open+Sans&family=Outfit:wght@300;400&family=Overpass:wght@300;500&family=Poppins&family=Roboto:ital,wght@0,300;0,500;1,500&family=Ubuntu:wght@300&display=swap");
+
+:root {
+  --dark-color: #502050;
+  --thin-pink: #ee68a4;
+  --thin-dark: #937b92;
+  --light-dark: #f7f2f7;
+  --white: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+body {
+  background-image: url("./images/bg-pattern-top-desktop.svg"),
+    url("./images/bg-pattern-bottom-desktop.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.social-container .container {
+  padding: 5rem 8rem;
+}
+@media (max-width: 900px) {
+  .social-container .container {
+    padding: 3.5rem 1.5rem;
+  }
+}
+
+.container .section-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 1300px) {
+  .container .section-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.section-wrapper .wrapper-left {
+  text-align: left;
+  width: 25.5rem;
+}
+@media (max-width: 1300px) {
+  .section-wrapper .wrapper-left {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.wrapper-left h2 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--dark-color);
+}
+@media (max-width: 900px) {
+  .wrapper-left h2 {
+    font-size: 2.5rem;
+  }
+}
+
+.wrapper-left p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: var(--thin-dark);
+}
+
+.section-wrapper .wrapper-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+@media (max-width: 1300px) {
+  .section-wrapper .wrapper-right {
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.wrapper-right .wrapper-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.wrapper-flex .item-list {
+  display: flex;
+  align-items: center;
+  padding: 20px 25px;
+  border-radius: 8px;
+  background-color: var(--light-dark);
+  width: 26rem;
+}
+.item-list p {
+  color: var(--dark-color);
+  font-weight: 700;
+}
+.wrapper-flex .item-one {
+  transform: translateX(-6rem);
+}
+.wrapper-flex .item-two {
+  transform: translateX(-4rem);
+}
+.item-list .item-icon {
+  margin-right: 1.5rem;
+}
+.item-icon img {
+  width: 1rem;
+  height: auto;
+  object-fit: contain;
+}
+@media (max-width: 1300px) {
+  .wrapper-flex .item-list {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 20rem;
+  }
+  .wrapper-flex .item-one,
+  .wrapper-flex .item-two {
+    transform: translateX(0);
+  }
+}
+
+.section-info {
+  padding-top: 60px;
+}
+@media (min-width: 1300px) {
+  .section-info {
+    padding-top: 40px;
+  }
+}
+.section-info .info-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.info-wrapper .info-card {
+  border-radius: 8px;
+  background-color: var(--dark-color);
+  height: fit-content;
+}
+.info-wrapper .info-second {
+  margin-top: 1.5rem;
+}
+.info-wrapper .info-third {
+  margin-top: 3rem;
+}
+@media (max-width: 1300px) {
+  .section-info .info-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .info-wrapper .info-second,
+  .info-wrapper .info-third {
+    margin-top: 0;
+  }
+}
+
+.info-card .info-body {
+  padding: 30px;
+}
+.info-body .info-profile {
+  display: flex;
+  align-items: center;
+}
+
+.info-profile .info-img {
+  margin-right: 1rem;
+}
+.info-img img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.info-profile .info-title {
+  display: flex;
+  flex-direction: column;
+}
+.info-title h4 {
+  color: var(--white);
+  margin-bottom: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.info-title p {
+  color: var(--thin-pink);
+}
+
+.info-body .info-text {
+  padding-top: 1.5rem;
+}
+.info-text p {
+  color: var(--white);
+  font-size: 1.1rem;
+  line-height: 1.2;
+}
